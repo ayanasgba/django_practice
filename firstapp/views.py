@@ -1,14 +1,18 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 from django.shortcuts import render
+from django.template.response import TemplateResponse
 
 # Create your views here.
-
+# def index(request):
+#     return render(request,"firstapp\home.html")
 def index(request):
-    return HttpResponse("Hello World! Это мой первый проект на Django!")
+    return TemplateResponse(request,"firstapp/home.html")
 def about(request):
-    return HttpResponse("<h2>0 сайте</h2>")
+    return HttpResponse("About")
 def contact(request):
-    return HttpResponse("<h2>Koнтaкты</h2>")
+    return HttpResponseRedirect("/about")
+def details(request):
+    return HttpResponsePermanentRedirect("/")
 
 # def products(request, productid = 1):
 #     output = "<h2>Продукт- № {0}</h2>".format(productid)

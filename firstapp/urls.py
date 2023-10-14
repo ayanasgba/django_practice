@@ -8,12 +8,17 @@ urlpatterns = [
     # path('contact/', views.contact, name='contact'),
 
     path('', views. index),
-    re_path(r'^about', views.about),
-    re_path(r'^contact', views .contact),
+    path('about/', views.about),
+    path('contact/', views.contact),
+    path('details/', views.details),
+    # re_path(r'^about', views.about),
+    # re_path(r'^contact', views .contact),
+
     # re_path(r'^products/$', views.products),
     # re_path(r'^products/(?P<productid>\d+)/', views.products),
     # re_path(r'^users/(?P<id>\d+)/(?P<name>\D+)/', views.users),
     # path('products/', views.products),
+
     path('products/<int:productid>/', views.products),
     path('users/', views.users),
     # path('users/<int:id>/<str:name>/', views.users),
