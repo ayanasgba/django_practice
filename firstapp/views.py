@@ -2,11 +2,20 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanen
 from django.shortcuts import render
 from django.template.response import TemplateResponse
 
-# Create your views here.
-# def index(request):
-#     return render(request,"firstapp\home.html")
 def index(request):
-    return TemplateResponse(request,"firstapp/home.html")
+    return render(request,"firstapp\home.html")
+#     data = {"header":"Передача параметров в шаблон",
+#             "message":"Шаблон загружен в index_app1.html"}
+#     return render(request,"firstapp/index_app1.html", context=data)
+
+# def index(request):
+#     header = "Персональные данные"  # обычная переменная
+#     langs = ["Английский", "Немецкий", "Испанский"]  # массив
+#     user = {"name": "Максим,", "age": 30}  # словарь
+#     addr = ("Виноградная", 23, 45)  # кортеж
+#     data = {"header": header, "langs": langs, "user": user, "address": addr}
+#     return TemplateResponse(request,"index.html", data)
+
 def about(request):
     return HttpResponse("About")
 def contact(request):
