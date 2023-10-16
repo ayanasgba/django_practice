@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 
 def index(request):
-    return render(request,"firstapp\home.html")
+    return render(request,"firstapp/index.html")
 #     data = {"header":"Передача параметров в шаблон",
 #             "message":"Шаблон загружен в index_app1.html"}
 #     return render(request,"firstapp/index_app1.html", context=data)
