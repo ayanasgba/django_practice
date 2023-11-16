@@ -9,7 +9,7 @@ urlpatterns = [
     # path('about/', views.about, name='about'),
     # path('contact/', views.contact, name='contact'),
 
-    path('', views. index),
+    path('firstapp/index/', views.index),
     path('about/', TemplateView.as_view(template_name="firstapp/about.html")),
     path('contact/', TemplateView.as_view(template_name="firstapp/contact.html",
                                           extra_context={"work":"Helllllooooo, it is my work!"})),
